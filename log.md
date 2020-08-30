@@ -1,6 +1,20 @@
 # 100 Days Of Code - Log
 
-### Day 2: Aug 30, 2020
+### Day 2: Aug 30, 2020 (2)
+
+**Today's Progress**: Outco Decrease and Conquer problem
+
+**Thoughts**: Had issues making example generic (using variables to represent values); did not think of using pointers correctly 
+##### Success: 
+Right idea of breaking down array and repeatedly checking half until nothing left to check
+##### Trouble/Questions:
+Had to glance at solution to realize I should use pointers
+
+**Link(s) to work**: 
+1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
+
+
+### Day 2: Aug 30, 2020 (1)
 
 **Today's Progress**: Did a live practice interview on Pramp
 
