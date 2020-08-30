@@ -45,11 +45,11 @@
 **Link(s) to work**
 1. [Word Count Engine](https://www.pramp.com/challenge/W5EJq2Jld3t2ny9jyZXG) (private)
 
-**Feedback**
-#####Success: 
+**Feedback** 
+##### Success: 
 Solved with help
 
-#####Trouble/Questions:
+##### Trouble/Questions:
 Unsure of BigO
 Understanding/knowledge of built-in .sort function and compare function
 
