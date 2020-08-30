@@ -1,6 +1,32 @@
 # 100 Days Of Code - Log
 
-### Day 2: Aug 30, 2020 (2)
+### Day 3: Aug 30, Sunday (2)
+
+**Today's Progress**: Outco Decrease and Conquer count ones in sorted bit array
+
+**Thoughts**: 
+##### Success: 
+
+##### Trouble/Questions:
+
+**Link(s) to work**: 
+1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
+
+### Day 3: Aug 30, Sunday (1)
+
+**Today's Progress**: Outco Decrease and Conquer GCD
+
+**Thoughts**: I don't remember how to find the GCD in general, should probably review basic math...
+##### Success: 
+
+##### Trouble/Questions:
+
+
+**Link(s) to work**: 
+1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
+
+
+### Day 2: Aug 29, Saturday (2)
 
 **Today's Progress**: Outco Decrease and Conquer problem
 
@@ -14,7 +40,7 @@ Had to glance at solution to realize I should use pointers
 1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
 
 
-### Day 2: Aug 30, 2020 (1)
+### Day 2: Aug 29, Saturday (1)
 
 **Today's Progress**: Did a live practice interview on Pramp
 
