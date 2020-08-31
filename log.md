@@ -1,16 +1,56 @@
 # 100 Days Of Code - Log
 
-### Day 3: Aug 30, Sunday (2)
 
-**Today's Progress**: Outco Decrease and Conquer count ones in sorted bit array
+### Day : 
 
-**Thoughts**: 
+**Today's Progress**: 
+
+**Thoughts** 
 ##### Success: 
 
 ##### Trouble/Questions:
 
-**Link(s) to work**: 
-1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
+**Link(s) to work**
+
+1. []() (private)
+
+
+### Day : 
+
+**Today's Progress**: 
+
+**Thoughts** 
+##### Success: 
+
+##### Trouble/Questions:
+
+**Link(s) to work**
+1. []() (private)
+
+
+### Day 4: Aug 31, Monday (1)
+
+**Today's Progress**: 
+
+**Thoughts** 
+##### Success: 
+
+##### Trouble/Questions:
+
+**Link(s) to work**
+1. []() (private)
+
+### Day 3: Aug 30, Sunday (2)
+
+**Today's Progress**: Outco Decrease and Conquer Count Ones in sorted bit array
+
+**Thoughts**: 
+##### Success: 
+got it partially working
+
+##### Trouble/Questions: 
+struggled with getting correct condition in while loop
+
 
 ### Day 3: Aug 30, Sunday (1)
 
@@ -22,13 +62,9 @@
 ##### Trouble/Questions:
 
 
-**Link(s) to work**: 
-1. [binary search](https://outco.teachable.com/courses/438359/lectures/6721931)
-
-
 ### Day 2: Aug 29, Saturday (2)
 
-**Today's Progress**: Outco Decrease and Conquer problem
+**Today's Progress**: Outco Decrease and Conquer Binary Search
 
 **Thoughts**: Had issues making example generic (using variables to represent values); did not think of using pointers correctly 
 ##### Success: 
