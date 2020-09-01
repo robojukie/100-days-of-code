@@ -328,14 +328,19 @@
 
   function getDuplicates(arr) {
     let numSet = new Set();
-    let result = new Set();
+    // let result = new Set();
+    let result = [];
     for (let num of arr)
       if (numSet.has(num)) {
-        result.add(num);
+        if (!result.includes(num)) {
+          result.push(num);
+        }
+        // result.add(num);
       } else {
         numSet.add(num)
       }  
-    return [...result];
+    // return [...result];
+    return result
   }
   console.log(getDuplicates([1, 2, 4, 2]));
   console.log(getDuplicates([3, 2, 3, 2, 3, 3, 4]));
