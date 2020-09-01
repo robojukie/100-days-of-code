@@ -16,7 +16,7 @@
 
 
 
-### Day : 
+### Day 5: Sep 1, Tuesday 
 
 **Today's Progress**: 
 
@@ -29,12 +29,16 @@
 1. []() (private)
 
 
-### Day 4: Aug 31, Monday (1)
-**Today's Progress**: 
+### Day 4: Aug 31, Monday
+**Today's Progress**: Today I worked on frequency counting problems
 
 **Thoughts** 
 ##### Success: 
+algorithmically, I didn't struggle much for most of it
+struggled with Sort Digits -> need to review math tricks
+struggled with not using builtin sort, not sure if this is an issue or not
 ##### Trouble/Questions:
+I'm not used to syntax/doing coding challenges in javascript
 
 **Link(s) to work**
 1. []() (private)
