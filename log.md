@@ -16,20 +16,26 @@
 
 
 
-### Day 5: Sep 1, Tuesday 
+### Day 5: Sep 1, Tuesday (1)
 
-**Today's Progress**: 
+**Today's Progress**: Finished frequency counting hw problems
 
 **Thoughts** 
 ##### Success: 
+getting familiar with finding approach
+algorithms weren't difficult
 
 ##### Trouble/Questions:
+- in need of review/practice of:
+1. iterating over maps
+2. new Map() vs let map = {} and how to iterate over each
+3. next time if implementation is well-practice, i'll just run through algo and move on for time sake - can implement later but want to focus on algo and ds I'm struggling with
 
 **Link(s) to work**
 1. []() (private)
 
 
-### Day 4: Aug 31, Monday
+### Day 4: Aug 31, Monday (1)
 **Today's Progress**: Today I worked on frequency counting problems
 
 **Thoughts** 
