@@ -28,7 +28,7 @@
 
    
   function unique(arr) {
-    // let output = Array.from(new Set(arr)); //complexity???
+    // let output = Array.from(new Set(arr)); //complexity?
     // return output // arr -> set - O(n), probably same for set -> arr
 
     // space: O(n), time: O(n^2)?
