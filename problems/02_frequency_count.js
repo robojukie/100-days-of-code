@@ -369,11 +369,55 @@
   *  "cat", "dog" --> false
   *  "racecar", "aaccrres" --> false
   */
+  // assume no space & punctuation, all lowercase
+  // racecar
+  // {r: 1, a: 1, c: 2, e: 1}
+  function anagramPair(string1, string2) {
+    // call .toLowerCase() on each string if needed
+    let charMap = new Map();
 
-  //   public static Boolean anagramPair(String string1, String string2) {
-  //     // YOUR WORK HERE
-  //     return false;
-  //   }
+    // if string lengths differ, return false
+    if (string1.length !== string2.length) {
+      return false;
+    }
+    // for each letter in string1
+    //   if in Map, increment count  
+    // else 
+    //   add letter, 1 to map  
+    // return false;
+    for (let ch of string1) {
+      if (charMap.has(ch)) {
+        let count = charMap.get(ch);
+        charMap.set(ch, ++count);
+      } else {
+        charMap.set(ch, 1);
+      }
+    }
+
+    for (let ch of string2) {
+      if (!charMap.has(ch)) return false;
+      let count = charMap.get(ch);
+      count--;
+      charMap.set(ch, count);
+      if (count <= 0) {
+        charMap.delete(ch)
+      }
+    }
+    // loop through string2
+    // if letter not in map
+    //   return false
+    // else 
+    //   decrement letter count
+    //   if count is 0, remove letter from map
+
+    return true
+  }
+  
+  console.log(anagramPair('cat', 'act'));
+  console.log(anagramPair('cat', 'dog'));
+  console.log(anagramPair('racecar', 'aaccrres'));
+  console.log(anagramPair('racecar', 'car')); // false?
+  console.log(anagramPair('noon', 'noon')); // false?
 
   /**
    *  Anagram Palindrome
@@ -401,421 +445,54 @@
    *  `"cat" --> false`
    */
 
-  // public static Boolean anagramPalindrome(String str) {
-  //   // YOUR WORK HERE
-  //   return false;
-  // }
-// }
+  // carrace
+  // {c:2, a:2, r:2, e:1}
+
+  // let map = {} -> when to use {} and when to use new Map()
+  // loop through each ch
+  // if ch in map : increment count for ch
+  // else : add ch to map with count 1
+
+  // get all values in map, if more than 1 of the values is not divisible by 2 (2 unique single characters)
+  // return false
+  // else return true
+
+  function anagramPalindrome(str) {
+    let charMap = new Map();
+    let singleChars = 0;
+
+    // let charMap = {};
+    // for (let ch of str) {
+    //   if (charMap[ch]) {
+    //     charMap[ch]++;
+    //   } else {
+    //     charMap[ch] = 1
+    //   }
+    // }
+
+    for (let ch of str) {
+      if (charMap.get(ch)) {
+        let count = charMap.get(ch);
+        charMap.set(ch, ++count);
+      } else {
+        charMap.set(ch, 1);
+      }
+    }
+    
+    // look up different ways of map iteration
+    for (let [key, values] of charMap.entries()) {
+      if (values % 2 !== 0) {
+        singleChars++;
+      }
+    }
+  
+    return singleChars > 1 ? false : true
+  }
+
+  // does it have to be dictionary word or just string?
+  console.log(anagramPalindrome('carrace'));
+  console.log(anagramPalindrome('noon'));
+  console.log(anagramPalindrome('cat'));
+  console.log(anagramPalindrome('')); // true?
 
-
-
-
-////////////////////////////////////////////////////////////
-///////////////  DO NOT TOUCH TEST BELOW!!!  ///////////////
-////////////////////////////////////////////////////////////
-
-// // use the Main class to run the test cases
-// class Main {
-//   private int[] testCount;
-
-//   // an interface to perform tests
-//   public interface Test {
-//     public boolean execute();
-//   }
-
-//   public static void main(String[] args) {
-
-//     // instantiate the testing of each module by resetting count and printing title of module
-//     int[] testCount = {0, 0};
-//     System.out.println("Unique Tests");
-
-//     // tests are in the form as shown
-//     assertTest(testCount, "should return unique values from sorted list with duplicates", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.unique(new int[]{1, 2, 4, 4, 5, 6});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(1);
-//           add(2);
-//           add(4);
-//           add(5);
-//           add(6);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//         assertTest(testCount, "should return single value for list with all duplicates", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.unique(new int[]{2, 2, 2, 2, 2, 2});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(2);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//         assertTest(testCount, "should return unique values from unsorted list with duplicates", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.unique(new int[]{1,2,3,1,2});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(1);
-//           add(2);
-//           add(3);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//         assertTest(testCount, "should return an empty list from empty input", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.unique(new int[]{});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Word Count Tests");
-
-//     // tests are in the form as shown
-//     assertTest(testCount, "should return an object with each word and its frequency", new Test() {
-//       public boolean execute() {
-//         HashMap<String, Integer> output = Problems.wordCount("The cat and the hat.");
-
-//         return output.get("the").intValue() == 2 && output.get("hat").intValue() == 1 && output.get("cat").intValue() == 1 && output.get("and").intValue() == 1;
-//       }
-//     });
-
-//     assertTest(testCount, "should return object with each word excluding punctuations", new Test() {
-//       public boolean execute() {
-//         HashMap<String, Integer> output = Problems.wordCount("It's a man, it's a plane, it's superman!");
-
-//         return output.get("its").intValue() == 3 && output.get("a").intValue() == 2 && output.get("man").intValue() == 1 && output.get("plane").intValue() == 1 && output.get("superman").intValue() == 1;
-//       }
-//     });
-
-//     assertTest(testCount, "should return empty object for empty string input", new Test() {
-//       public boolean execute() {
-//         HashMap<String, Integer> output = Problems.wordCount("");
-//         return output.isEmpty();
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("rgb Count Tests");
-
-//     // tests are in the form as shown
-//     assertTest(testCount, "should return number correct number of rgb from input", new Test() {
-//       public boolean execute() {
-//         int output = Problems.rgb("rgbrgb");
-//         return output == 2;
-//       }
-//     });
-
-//     assertTest(testCount, "should return correct number of rgb from input despite characters out of sequence", new Test() {
-//       public boolean execute() {
-//         int output = Problems.rgb("rbgrbrgrgbgrrggbbbbrgrgrgrg");
-//         return output == 7;
-//       }
-//     });
-
-//     assertTest(testCount, "should return 0 as output for no number of rgb", new Test() {
-//       public boolean execute() {
-//         int output = Problems.rgb("bbrr");
-//         return output == 0;
-//       }
-//     });
-
-//     assertTest(testCount, "should return 0 for empty input", new Test() {
-//       public boolean execute() {
-//         int output = Problems.rgb("");
-//         return output == 0;
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Missing Number Tests");
-
-//     // tests are in the form as shown
-//     assertTest(testCount, "should return [3] for input of [1, 4, 2]", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.missingNumber(4, new int[]{1, 4, 2});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(3);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-
-//     assertTest(testCount, "should return [2, 3, 5, 8] for input of [4, 7, 1, 6]", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.missingNumber(8, new int[]{4, 7, 1, 6});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(2);
-//           add(3);
-//           add(5);
-//           add(8);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//     assertTest(testCount, "should return [3, 5] for input of [6, 4, 2, 1]", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.missingNumber(6, new int[]{6, 4, 2, 1});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(3);
-//           add(5);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Letter Sort Tests");
-
-//     assertTest(testCount, "should return 'ehllo' for input 'hello'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.letterSort("hello");
-//         return output.equals("ehllo");
-//       }
-//     });
-
-//     assertTest(testCount, "should return 'abdehiortw' for input of 'whiteboard'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.letterSort("whiteboard");
-//         return output.equals("abdehiortw");
-//       }
-//     });
-
-//     assertTest(testCount, "should return 'eno' for input 'one'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.letterSort("one");
-//         return output.equals("eno");
-//       }
-//     });
-
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Character Mode Tests");
-
-//     assertTest(testCount, "should return 'l' for input 'hello'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.characterMode("hello");
-//         return output.equals("l");
-//       }
-//     });
-
-//     assertTest(testCount, "should return 'a' when input is 'A walk in the park'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.characterMode("A walk in the park");
-//         return output.equals("a");
-//       }
-//     });
-
-//     assertTest(testCount, "should return 'no' when input is 'noon'", new Test() {
-//       public boolean execute() {
-//         String output = Problems.characterMode("noon");
-//         return output.equals("no");
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Sort Digits Tests");
-
-//     assertTest(testCount, "should return '789' when input is '8970'", new Test() {
-//       public boolean execute() {
-//         int output = Problems.sortDigits(8970);
-//         return output == 789;
-//       }
-//     });
-
-//     assertTest(testCount, "should return '23445' when input is '32445'", new Test() {
-//       public boolean execute() {
-//         int output = Problems.sortDigits(32445);
-//         return output == 23445;
-//       }
-//     });
-
-//     assertTest(testCount, "should return '111' when input is '10101'", new Test() {
-//       public boolean execute() {
-//         int output = Problems.sortDigits(10101);
-//         return output == 111;
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Get Duplicates Tests");
-
-//     assertTest(testCount, "should return '[2]' when input is '[1, 2, 4, 2]'", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.getDuplicates(new int[] {1, 2, 4, 2});
-//         ArrayList<Integer> test = new ArrayList<Integer>() {{
-//           add(2);
-//         }};
-//         return arrayListsEqual(output, test);
-//       }
-//     });
-
-//     assertTest(testCount, "should return '[3, 2]' or '[2, 3]' when input is '[3, 2, 3, 2, 3, 3, 4]'", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.getDuplicates(new int[] {3, 2, 3, 2, 3, 3, 4});
-//         ArrayList<Integer> test1 = new ArrayList<Integer>() {{
-//           add(2);
-//           add(3);
-//         }};
-
-//         ArrayList<Integer> test2 = new ArrayList<Integer>() {{
-//           add(3);
-//           add(2);
-//         }};
-//         return arrayListsEqual(output, test1) || arrayListsEqual(output, test2);
-//       }
-//     });
-
-//     assertTest(testCount, "should return '[]' when input is '[1, 2, 3, 4]'", new Test() {
-//       public boolean execute() {
-//         ArrayList<Integer> output = Problems.getDuplicates(new int[] {1, 2, 3, 4});
-//         return output.size() == 0;
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Anagram Pair Tests");
-
-//     assertTest(testCount, "should return true when input is 'cat, act'", new Test() {
-//       public boolean execute() {
-//         return Problems.anagramPair("cat", "act");
-//       }
-//     });
-
-//     assertTest(testCount, "should return false when input is 'cat, dog'", new Test() {
-//       public boolean execute() {
-//         return !Problems.anagramPair("cat", "dog");
-//       }
-//     });
-
-//     assertTest(testCount, "should return false when input is 'racecar, aaccrres'", new Test() {
-//       public boolean execute() {
-//         return !Problems.anagramPair("racecar", "aaccrres");
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-
-
-
-//     testCount[0] = 0;
-//     testCount[1] = 0;
-//     System.out.println("Anagram Palindrome Tests");
-
-//     assertTest(testCount, "should return true when input is 'carrace'", new Test() {
-//       public boolean execute() {
-//         return Problems.anagramPalindrome("carrace");
-//       }
-//     });
-
-//     assertTest(testCount, "should return false when input is 'cat'", new Test() {
-//       public boolean execute() {
-//         return !Problems.anagramPalindrome("cat");
-//       }
-//     });
-
-//     System.out.println("PASSED: " + testCount[0] + " / " + testCount[1] + "\n\n");
-//   }
-
-//   private static boolean arrayListsEqual(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
-//     if(arr1.size() != arr2.size()) {
-//       return false;
-//     }
-
-//     for(int i = 0; i < arr1.size(); i++) {
-//       if(arr1.get(i) != arr2.get(i)) {
-//         return false;
-//       }
-//     }
-//     return true;
-//   }
-
-
-//   // function for checking if arrays are equal
-//   private static boolean arraysEqual(int[] arr1, int[] arr2) {
-//     if (arr1.length != arr2.length) {
-//       return false;
-//     }
-
-//     for (int i = 0 ; i < arr1.length ; i++) {
-//       if (arr1[i] != arr2[i]) {
-//         return false;
-//       }
-//     }
-
-//     return true;
-//   }
-
-//   // checks if array is sorted in linear time
-//   private static boolean isSorted(int[] input) {
-//     if (input.length < 2) {
-//       return true;
-//     }
-
-//     for (int i = 1 ; i < input.length ; i++) {
-//       if (input[i-1] > input[i]) {
-//         return false;
-//       }
-//     }
-
-//     return true;
-//   }
-
-
-
-// // do not edit below, this is to wrap the test and check for exceptions
-//   private static void assertTest(int[] count, String name, Test test) {
-//     String pass = "false";
-//     count[1]++;
-
-//     try {
-//       if (test.execute()) {
-//         pass = " true";
-//         count[0]++;
-//       }
-//     } catch(Exception e) {}
-//     String result = "  " + (count[1] + ")   ").substring(0, 5) + pass + " : " + name;
-//     System.out.println(result);
-//   }
 // }
