@@ -12,8 +12,53 @@
 
 **Link(s) to work**
 
-1. []() (private)
+### Day : 
 
+**Today's Progress**: 
+
+**Thoughts** 
+##### Success: 
+
+##### Trouble/Questions:
+
+**Link(s) to work**
+
+
+
+### Day 6: Sep 2, WED (1a)
+
+**Today's Progress**: Did a problem from an interview cake email
+
+**Thoughts** 
+##### Success: 
+quick and easy
+
+##### Trouble/Questions:
+got careless and set 2nd swap item to arr[temp] instead of to temp
+
+**Link(s) to work**
+
+1. []() (private)
+```
+function reverse(arrayOfChars) {
+  // ['y', 'a', 'b', 'c', 'd']
+  //             .
+  //             *
+  // Reverse the input array of characters in place
+  let start = 0; // 0 1 
+  let end = arrayOfChars.length - 1; //4 3
+  
+  while (start < end) {
+    let temp = arrayOfChars[start]; // d c
+    arrayOfChars[start] = arrayOfChars[end]; // a  
+    arrayOfChars[end] = temp; // c
+    start++;
+    end--
+  }
+  console.log(arrayOfChars)
+  return arrayOfChars
+}
+```
 
 
 ### Day 5: Sep 1, Tuesday (1)
@@ -33,6 +78,7 @@ algorithms weren't difficult
 
 **Link(s) to work**
 1. []() (private)
+
 
 
 ### Day 4: Aug 31, Monday (1)
