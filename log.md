@@ -46,7 +46,7 @@ ugh
 ##### Trouble/Questions:
 IDK I'm too tired to think. Careless errors like comparing index instead of value at index. need to review how square rooting works
 **Link(s) to work**
-
+fack
 
 
 ### Day 6: Sep 2, WED (1a)
