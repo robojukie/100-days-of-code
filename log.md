@@ -1,5 +1,16 @@
 # 100 Days Of Code - Log
 
+### Day : 
+
+**Today's Progress**: 
+
+**Thoughts** 
+##### Success: 
+
+##### Trouble/Questions:
+
+**Link(s) to work**
+
 
 ### Day : 
 
@@ -12,6 +23,7 @@
 
 **Link(s) to work**
 
+
 ### Day : 
 
 **Today's Progress**: 
@@ -21,6 +33,18 @@
 
 ##### Trouble/Questions:
 
+**Link(s) to work**
+
+
+### Day 6/7: Sept 2/3, WED (1b)
+
+**Today's Progress**: Decrease and Conquer hw problems
+
+**Thoughts** Do these in the morning when I'm not tired. Could not think clearly and made lots of careless errors
+##### Success:
+ugh
+##### Trouble/Questions:
+IDK I'm too tired to think. Careless errors like comparing index instead of value at index. need to review how square rooting works
 **Link(s) to work**
 
 
