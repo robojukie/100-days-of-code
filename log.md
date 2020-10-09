@@ -23,17 +23,66 @@
 
 **Link(s) to work**
 
+### Day 11: 9 OCT FRI
 
-### Day : 
+**Today's Progress**: outco helper method recursion 
 
-**Today's Progress**: 
+**Thoughts** 
+##### Success: 
+
+##### Trouble/Questions:
+when to return vs just call when printing array
+
+**Link(s) to work**
+
+starting over-ish!
+### Day 10 : October 5
+
+**Today's Progress**: some problem online i forget
 
 **Thoughts** 
 ##### Success: 
 
 ##### Trouble/Questions:
 
+
 **Link(s) to work**
+
+
+### Day : ? October 2020
+
+**Today's Progress**: get data, process response, post data coding challennge
+
+**Thoughts** 
+##### Success: 
+got successful GET and POST requests working
+
+##### Notes/Comments:
+used vanilla js, printed post response in console.log, did not use node-js
+future:
+- try again with node using node fetch
+- try using axios
+- try creating react front end for data
+
+##### Trouble/Questions:
+- had to figure out how to get project set up, use fetch, and async/await correctly which took awhile
+
+**Link(s) to work**
+
+
+### Day : ???
+
+**Today's Progress**: graphql, apollo, react, typescript: add item to list using a modal, delete item, client tests coding challenge
+
+**Thoughts** 
+##### Success:
+got the first 2 parts working
+
+##### Trouble/Questions:
+could not figure out how to get working test suite which was part 3; wanted to do it without using enzyme - next time try using enzyme
+
+**Link(s) to work**
+
 
 
 ### Day 6/7: Sept 2/3, WED (1b)
