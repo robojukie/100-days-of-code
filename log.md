@@ -32,7 +32,7 @@
 
 ##### Trouble/Questions:
 when to return vs just call when printing array
-
+review 2e and 2g - flattening array, merging sorted array recursively
 **Link(s) to work**
 
 starting over-ish!
