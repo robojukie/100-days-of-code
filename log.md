@@ -1,5 +1,56 @@
 # 100 Days Of Code - Log
 
+### Day : ??? 15 NOV SUN
+
+**Today's Progress**: 
+
+hw_06_dp: max consecutive sum (easy/med)|
+
+tp_03_dp: min window substring (hard) |
+
+warmup_03_buy_sell_stock (easy)
+
+**Thoughts** 
+##### Success:
+
+buy sell stock was very easy
+
+##### Trouble/Questions:
+
+struggled with min window substring - need to review this
+
+**Link(s) to work**
+
+### Day : 24 OCT SAT
+
+**Today's Progress**: finding and scraping nike api data
+
+**Thoughts** 
+##### Success: 
+used Charles Proxy: https://www.charlesproxy.com/documentation/faqs/
+used this tutorial:
+https://www.raywenderlich.com/1827524-charles-proxy-tutorial-for-ios
+https://deliveroo.engineering/2018/12/04/how-to-use-charles-proxy-to-rewrite-https-traffic-for-web-applications.html
+***don't put cert on pc, conflicts with phone
+
+helpful for getting bearer token from nike:
+https://medium.com/@sruj/migrating-from-nrc-to-strava-994ef34c963d
+
+semi-helpful:
+https://yasoob.me/posts/nike-run-club-data-visualization/
+endpoints have old NTC data but nothing recent
+
+##### Trouble/Questions:
+tried postman, doesn't work
+did not try interceptor
+charles proxy has free 30 day trial
+some free open source ones i haven't tried
+
+**Link(s) to work**
+https://codesandbox.io/s/lucid-leakey-w4m9y?file=/src/index.js
+
+
+
 ### Day : 
 
 **Today's Progress**: 
@@ -11,10 +62,23 @@
 
 **Link(s) to work**
 
+### Day : 12 OCT MON
 
-### Day : 
+**Today's Progress**: 05_DP Coin Sum
 
-**Today's Progress**: 
+**Thoughts** 
+##### Success:
+got the basic algorithm down
+
+##### Trouble/Questions:
+had trouble translating from writing to code
+
+**Link(s) to work**
+
+
+### Day 12: 10 OCT SAT 
+
+**Today's Progress**: something i forget
 
 **Thoughts** 
 ##### Success: 
