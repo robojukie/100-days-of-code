@@ -1,7 +1,7 @@
 # 100 Days Of Code - Log
 
 ### Day 33_4: NOV 19 PLAN PLAN PLAN
-**Today's Progress**: bloomberg tech screen
+**Today's Progress**: 
 
 **Thoughts** 
 ##### Success:
